@@ -1,0 +1,10 @@
+1. KafkaJS
+
+👉 Pure JavaScript Kafka client
+
+2. Confluent Kafka JavaScript Client
+
+👉 Wrapper over librdkafka (C library)
+
+
+ - maybe try using confluent for faster performance instead of kafkajs.

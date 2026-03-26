@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "AlgoCompany",
+    "version": "1.0",
+    "description": "A brief description of what this extension does",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+       
+    },
+  
+    "background": {
+        "service_worker": "background.js"
+    },
+
+     "host_permissions": [
+    "http://localhost:3000/*"
+  ]
+}
