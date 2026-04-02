@@ -21,7 +21,7 @@ const connectProducer = async()=>{  //will use this at the time of initializatio
 
 const placeOnKafka = (data) =>{
 
- 
+  
     producer.send({  //not awaiting to avoid bottlenecking the stream...this is fire-and-forget
         topic:'raw-trades',
         messages:[{

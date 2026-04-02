@@ -3,21 +3,21 @@ const streamSelector = document.getElementById('streamSelector');
 streamSelector.addEventListener('change', async (event) => {
     const selectedStream = event.target.value;
 
-    try{
+    try {
         const response = await fetch('http://localhost:3000/updateStream', {
             method: 'PUT',
-              headers: {
+            headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ streamName: selectedStream })
-    });
+        });
 
-    if(!response.ok){
-        throw new Error(`Server responded with status ${response.status}`);
+        if (!response.ok) {
+            throw new Error(`Server responded with status ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Error updating stream:', error);
     }
-} catch(error){
-    console.error('Error updating stream:', error);
-}
 
 
 
