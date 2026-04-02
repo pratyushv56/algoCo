@@ -32,3 +32,11 @@ services:
       # 🔥 REQUIRED for KRaft stability
       KAFKA_CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
       KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+  
+  
+  
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"    
