@@ -21,6 +21,25 @@ streamSelector.addEventListener('change', async (event) => {
 
 
 
+
+
 });
+
+const ws = new WebSocket('ws://localhost:7000');
+
+ws.onopen = () => {
+    console.log('WebSocket connection established');
+};
+
+ws.onmessage = (message) => {
+    const signal = JSON.parse(message.data);
+    console.log('Received signal:', signal);
+
+        const signalsElement = document.getElementById('signals');
+        signalsElement.textContent = `Signal: ${signal.signal}, Price: ${signal.price}`;
+
+
+    // Here you can add code to update the frontend UI based on the received signal
+};
 
 
