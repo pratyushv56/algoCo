@@ -92,7 +92,7 @@ const breakout = (candle,key) => {
         price: candle.close
   });
 
-    previousHiigh = high;
+    previousHigh = high;
     previousLow = low;
     previousClose = close;
       
