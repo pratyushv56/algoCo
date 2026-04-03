@@ -4,6 +4,12 @@ const express = require('express');
 const server = express();
 const port = process.env.PORT || 3000;
 
+const WebSocket = require('ws');
+
+const ws = new WebSocket("ws://localhost:8080");
+
+ws.
+
 
 const currentTicker = "BTCUSDT"; // Example ticker, can be dynamic based on user selection
 
@@ -34,3 +40,17 @@ const run = async ()=>{
 }
 
 run();
+
+
+
+
+server.get('/', (req, res) => {
+    res.send('Frontend Feeder is running');
+});
+
+
+
+server.listen(port, () => {
+    console.log(`Frontend feeder server is running on port ${port}`);
+});
+
